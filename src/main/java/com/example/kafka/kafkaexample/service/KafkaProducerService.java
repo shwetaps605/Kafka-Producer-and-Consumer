@@ -13,7 +13,7 @@ public class KafkaProducerService {
     @Autowired
     private KafkaTemplate<String,String> kafkaTemplate;
 
-    private String TOPIC = "nntopic";
+    private String TOPIC = "newTopic";
 
     public void sendPayload(@Payload String jsonObject){
         log.info("Sending payload to topic {}...",TOPIC);

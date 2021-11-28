@@ -25,7 +25,7 @@ public class KafkaConsumerService {
     @Autowired
     private NotificationProcessor notificationProcessor;
 
-    @KafkaListener(topics = "nntopic", groupId = "group_id",containerFactory = "kafkaListenerContainerFactory")
+    @KafkaListener(topics = "newTopic", groupId = "group_id",containerFactory = "kafkaListenerContainerFactory")
     public void consumedVehicle(String jsonString){
         log.info("Receiving payload...");
         NotificationDto notificationDto = gson.fromJson(jsonString, NOTIFICATION_DTO);
